@@ -5,8 +5,17 @@
 #include <lava-extras/display/DisplayOutput.hh>
 #include <lava-extras/display/DisplayWindow.hh>
 
-const auto n_devices = 1;
-std::vector<std::pair<int, int>> display_idcs = {{0, 0}};
+/// Simple Testing setup: use the first screen on the first device
+//const auto n_devices = 1;
+//std::vector<std::pair<int, int>> display_idcs = {{0, 0}};
+
+/// Complicated setup: 4 devices, one screen on each
+//const auto n_devices = 4;
+//std::vector<std::pair<int, int>> display_idcs = {{0, 0}, {1, 0}, {2, 0}, {3, 0}};
+
+/// Simplest failing setup: 2 devices, 5 screens
+const auto n_devices = 2;
+std::vector<std::pair<int, int>> display_idcs = {{0, 0}, {0, 1}, {0, 2}, {0, 3}, {1, 0}};
 
 int main()
 {
